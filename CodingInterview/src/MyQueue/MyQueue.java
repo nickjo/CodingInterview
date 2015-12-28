@@ -36,7 +36,6 @@ public class MyQueue {
 		for(int i=front; i != rear; i=next(i)){
 			queue[i] = null;
 		}
-		
 		front = rear = 0;
 	}
 	
@@ -72,11 +71,11 @@ public class MyQueue {
 		
 		s = "MyQueue=[";
 		for(int i=front; i !=rear; i=next(i)){
-			s += queue[i];
+			s += queue[i] + " ";
 			
-			if(i < rear-1){
+			/*if(i != front-1){
 				s += ",";
-			}
+			}*/
 		}
 		s += "], front=" + front + ", rear=" + rear;
 		return s;
