@@ -9,6 +9,7 @@ import MyStack.ThreeStacks;
 public class Ex3_1_1 {
 	public static void main(String[] args){
 		ThreeStacks stacks = new ThreeStacks();
+		ThreeStacks stacks1 = new ThreeStacks(5, 5);
 		
 		try {
 			stacks.push(0, 0);
@@ -32,11 +33,37 @@ public class Ex3_1_1 {
 			System.out.println("1¹ø Stack peek: " + stacks.peek(1));
 			System.out.println("2¹ø Stack pop: " + stacks.pop(2));
 			
-			System.out.println(stacks.tostring(0) + "\n");
-			System.out.println(stacks.tostringAll());
+			System.out.println(stacks.toString(0) + "\n");
+			System.out.println(stacks.toStringAll());
+			
+			System.out.println("======================================");
+			
+			stacks1.push(0, "A");
+			stacks1.push(0, "A");
+			stacks1.push(0, "A");
+			
+			stacks1.push(1, "B");
+			stacks1.push(1, "B");
+			stacks1.push(1, "B");
+			
+			stacks1.push(2, "C");
+			stacks1.push(2, "C");
+			stacks1.push(2, "C");
+			
+			stacks1.push(3, "D");
+			stacks1.push(3, "D");
+			stacks1.push(3, "D");
+			
+			stacks1.push(4, "E");
+			stacks1.push(4, "E");
+			stacks1.push(4, "E");
+			
+			System.out.println(stacks1.toStringAll());
+			
 			
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
 			System.out.println(e.getMessage());
 		}
 		

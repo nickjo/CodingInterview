@@ -1,12 +1,31 @@
 package MyStack;
 
 public class ThreeStacks {
-	int stackSize = 5;
-	int makeStacks = 3;
-	int[] buffer = new int[stackSize * makeStacks];
-	int[] stackPointer = {-1, -1, -1}; // 맨 윗 원소 위치 추적용
+	int stackSize;
+	int makeStacks;	
+	Object[] buffer;
+	int[] stackPointer; // 맨 윗 원소 위치 추적용
 	
-	public void push(int stackNum, int value) throws Exception{
+	static int DEFAULT_STACK_SIZE = 5;
+	static int DEFAULT_MAKE_STACKS = 3;
+	
+	public ThreeStacks(){
+		this(DEFAULT_STACK_SIZE, DEFAULT_MAKE_STACKS);
+	}
+	
+	public ThreeStacks(int stackSize, int makeStacks){
+		this.stackSize = stackSize;
+		this.makeStacks = makeStacks;
+		buffer = new Object[stackSize * makeStacks];
+		stackPointer = new int[makeStacks];
+		
+		// 원소 초기 위치값
+		for(int i=0; i < stackPointer.length; i++){
+			stackPointer[i] = -1;
+		}
+	}
+	
+	public void push(int stackNum, Object value) throws Exception{
 		// 여유 공간이 있는지 검사
 		if(stackPointer[stackNum] + 1 >= stackSize){ // 마지막 원소
 			throw new Exception("Out of space");
@@ -18,18 +37,18 @@ public class ThreeStacks {
 	}
 	
 	// 최상위 데이터를 꺼낸다.
-	public int pop(int stackNum) throws Exception{
+	public Object pop(int stackNum) throws Exception{
 		if(stackPointer[stackNum] == -1){
 			throw new Exception("Trying to pop an empty stack");
 		}
-		int value = buffer[absTopOfStack(stackNum)]; // 맨 윗 원소
+		Object value = buffer[absTopOfStack(stackNum)]; // 맨 윗 원소
 		buffer[absTopOfStack(stackNum)] = 0; // 맨 윗 원소 비움
 		stackPointer[stackNum]--; // 스택 포인터 감소
 		return value;
 	}
 	
 	// 해당 스택의 최상위 데이터를 출력(스택 데이터에는 변화 없음)
-	public int peek(int stackNum){
+	public Object peek(int stackNum){
 		int index = absTopOfStack(stackNum);
 		return buffer[index];
 	}
@@ -43,7 +62,8 @@ public class ThreeStacks {
 		return stackNum * stackSize + stackPointer[stackNum];
 	}
 	
-	public String tostring(int stackNum){
+	// 특정 스택 출력
+	public String toString(int stackNum){
 		String str = stackNum + "번 Stack: [";
 		int firstSize = stackNum * stackSize; 
 		
@@ -56,11 +76,12 @@ public class ThreeStacks {
 		return str + "]";
 	}
 	
-	public String tostringAll(){
+	// 모든 스택 출력
+	public String toStringAll(){
 		String str = "";
 		
 		for(int i = 0; i < makeStacks; i++){
-			str += tostring(i) + "\n";
+			str += toString(i) + "\n";
 		}
 		return str;
 	}
