@@ -178,7 +178,7 @@ public class LinkedList {
 		private Node next;
 		private int nextIndex;
 		
-		public ListIterator() {
+		public ListIterator(){
 			next = head;
 			nextIndex = 0;
 		}

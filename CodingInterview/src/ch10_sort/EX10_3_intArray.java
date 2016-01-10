@@ -2,6 +2,10 @@ package ch10_sort;
 
 import java.util.Random;
 
+import MySort.BubbleSort;
+import MySort.InsertionSort;
+import MySort.SelectionSort;
+
 public class EX10_3_intArray {
 	private int[] intArray;
 	
@@ -48,5 +52,20 @@ public class EX10_3_intArray {
 			}
 		}
 		return str += "]";
+	}
+	
+	// 버튼 소트
+	public void bubbleSort(){
+		intArray = BubbleSort.sort(intArray);
+	}
+	
+	// 선택 소트
+	public void selectSort(){
+		intArray = SelectionSort.sort(intArray);
+	}
+	
+	// 삽입 소트
+	public void insertionSort(){
+		intArray = InsertionSort.sort(intArray);
 	}
 }
