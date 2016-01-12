@@ -21,6 +21,5 @@ public class Ex10_3 {
 			e.getMessage();
 			e.printStackTrace();
 		}
-				
 	}
 }
