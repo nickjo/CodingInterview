@@ -1,6 +1,8 @@
 package ch10_sort;
 
 import java.util.Random;
+
+import MySearch.BinarySearch;
 import MySort.BubbleSort;
 import MySort.InsertionSort;
 import MySort.QuickSort1;
@@ -79,6 +81,8 @@ public class EX10_3_intArray {
 		return -1;
 	}
 	
+	
+	
 	// 배열 출력
 	public String toString(){
 		String str = "Array: [";
@@ -114,5 +118,13 @@ public class EX10_3_intArray {
 	// 퀵 소트
 	public void quickSort(){
 		intArray = QuickSort1.sort(intArray);
+	}
+	
+	// 이진탐색(Binary Search) 
+	public int binaraySearch(int inputNum){
+		int searchedNum = -1;
+		searchedNum = BinarySearch.binarySearch(intArray, inputNum);
+				
+		return searchedNum;
 	}
 }
