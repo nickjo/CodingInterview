@@ -26,6 +26,6 @@ public class BinarySearch {
 			}
 			System.out.println();
 		}
-		return pivot;
+		return -1;
 	}
 }

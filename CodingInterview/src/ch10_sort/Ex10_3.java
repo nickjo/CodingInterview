@@ -10,14 +10,13 @@ public class Ex10_3 {
 		try {
 			exArray.quickSort();
 			System.out.println("Sorted " + exArray.toString());
-			/*exArray.rotationArray();
-			System.out.println("rotated " + exArray.toString());*/
+			exArray.rotationArray();
+			System.out.println("rotated " + exArray.toString());
 			
 			System.out.print("찾은 숫자를 입력하시오 => ");
 			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-			//System.out.println(exArray.searchNumber(Integer.parseInt(in.readLine())));
+			System.out.println(exArray.searchNumber(Integer.parseInt(in.readLine())));
 			
-			System.out.println("result index: " + exArray.binaraySearch(Integer.parseInt(in.readLine())));
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.getMessage();
