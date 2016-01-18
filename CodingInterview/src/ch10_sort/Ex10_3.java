@@ -17,7 +17,7 @@ public class Ex10_3 {
 			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 			//System.out.println(exArray.searchNumber(Integer.parseInt(in.readLine())));
 			
-			System.out.println(exArray.binaraySearch(Integer.parseInt(in.readLine())));
+			System.out.println("result index: " + exArray.binaraySearch(Integer.parseInt(in.readLine())));
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.getMessage();
