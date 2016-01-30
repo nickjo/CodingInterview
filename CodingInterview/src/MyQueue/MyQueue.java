@@ -18,7 +18,7 @@ public class MyQueue {
 		queue = new Object[size];
 		front = rear = 0;
 	}
-	
+	 
 	// 에러처리
 	private void error(String s){
 		System.err.println(s);

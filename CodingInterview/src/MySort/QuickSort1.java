@@ -25,7 +25,6 @@ public class QuickSort1 {
 			int temp = a[i];
 			a[i] = a[j];
 			a[j] = temp;
-			
 		} // end for
 		
 		// a[i]와 추축을 교환한다.
