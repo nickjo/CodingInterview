@@ -7,23 +7,16 @@ public class BubbleSort {
 		 * 반대라면 순서를 바꿔주는 것
 		 * */
 		int n = a.length;
-		int roofCount = 0;
-		int swapCount = 0;
 		
 		for(int i=0; i<n-1; i++){
 			for(int j=n-1; j>i; j--){
-				++roofCount;
 				if(a[j-1] > a[j]){
 					int temp = a[j];
 					a[j] = a[j-1];
 					a[j-1] = temp;
-					
-					++swapCount;
 				}
 			}
 		}
-		System.out.println("진행횟수: " + roofCount + ", 교환횟수: " + swapCount);
-		
 		return a;
 	}
 }

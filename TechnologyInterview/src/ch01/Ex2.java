@@ -12,6 +12,8 @@ public class Ex2 {
 		int count = 1;
 		String resultStr = "";
 		
+		// K + (countt++);
+		
 		// 문자열을 배열에 저장
 		for(int i=0; i < encryptionCode.length(); i++){
 			decodingCode.add(encryptionCode.charAt(i)+"");
