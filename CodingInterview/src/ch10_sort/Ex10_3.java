@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 
 public class Ex10_3 {
 	public static void main(String[] args){
-		EX10_3_intArray exArray = new EX10_3_intArray(10);
+		EX10_3_intArray exArray = new EX10_3_intArray(20);
 		
 		try {
 			exArray.quickSort();
@@ -16,6 +16,7 @@ public class Ex10_3 {
 			System.out.print("찾은 숫자를 입력하시오 => ");
 			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 			System.out.println(exArray.searchNumber(Integer.parseInt(in.readLine())));
+			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.getMessage();
