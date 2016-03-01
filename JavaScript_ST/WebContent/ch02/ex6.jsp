@@ -22,7 +22,7 @@ with(human){
 	document.write(job+"<br>");
 }
 </script>
-</head>100
+</head>
 <body>
 
 </body>
