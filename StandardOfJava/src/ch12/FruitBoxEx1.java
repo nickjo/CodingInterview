@@ -2,6 +2,10 @@ package ch12;
 
 import java.util.ArrayList;
 
+import ch12_2.Apple;
+import ch12_2.Fruit;
+import ch12_2.Grape;
+
 class Fruit 			  {public String toString(){return "Fruit";}}
 class Apple extends Fruit {public String toString(){return "Apple";}}
 class Grape extends Fruit {public String toString(){return "Grape";}}
@@ -13,7 +17,7 @@ public class FruitBoxEx1 {
 		FruitBox<Fruit> fruitBox = new FruitBox<>();
 		FruitBox<Apple> appleBox = new FruitBox<>();
 		FruitBox<Grape> grapeBox = new FruitBox<>();
-		//Box1<Toy> toyBox = new FruitBox<>();
+		//Box1<Toy> toyBox = new FruitBox<>(); // 에러 발생
 		
 		fruitBox.add(new Fruit());
 		appleBox.add(new Apple());

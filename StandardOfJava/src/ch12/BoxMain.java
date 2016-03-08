@@ -4,9 +4,8 @@ public class BoxMain {
 	public static void main(String[] args) {
 		Box<String> box = new Box<>();
 		
-		box.setItem("ì¿ íŒ¡");
-		box.setItem("í‹°ëª¬");
-		
+		box.setItem("Box1");
+		// Ãâ·Â½Ã Çüº¯È¯À» ÇÏÁö ¾Ê¾Æµµ µÈ´Ù.
 		System.out.println(box.getItem());
 	}
 }
