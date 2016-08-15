@@ -5,6 +5,6 @@ package Algoritm01;
  */
 public class Selction01 {
     public static void main(String[] args) {
-        System.out.println("Selection01!!!");
+        System.out.println("Selection01!!!!!!!");
     }
 }
