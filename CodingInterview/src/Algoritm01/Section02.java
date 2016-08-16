@@ -7,6 +7,7 @@ import java.util.Scanner;
  * Created by nick on 16. 8. 17.
  */
 public class Section02 {
+    // 0~9 사이 의 랜덤 한 수 맞추기
     public static void main(String[] args) {
         Random r = new Random();
         Scanner s = new Scanner(System.in);

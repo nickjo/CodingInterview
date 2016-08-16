@@ -6,6 +6,7 @@ import java.util.Scanner;
  * Created by nick on 16. 8. 15.
  */
 public class Section01 {
+    // 10진수, 16진 수 출력
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
 
